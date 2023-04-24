@@ -131,6 +131,6 @@ graph = nx.Graph()
 graph.add_nodes_from(nodes)
 graph.add_weighted_edges_from(edges)
 
-cluster = get_clusters(get_spanning_tree(graph), 40)
+cluster = get_clusters(nx.minimum_spanning_tree(graph), 40)
 print(cluster)
 print(len(cluster))
